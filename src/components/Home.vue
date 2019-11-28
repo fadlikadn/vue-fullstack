@@ -14,7 +14,7 @@
 <style>
     #home {
         background: url('../../src/assets/pizza.jpg');
-        height: 500px;
+        height: 800px;
         padding: 10%;
         background-repeat: no-repeat;
         background-position: center;
