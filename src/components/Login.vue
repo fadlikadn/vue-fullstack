@@ -9,14 +9,23 @@
                 <label>Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter password">
             </div>
-            <button type="button" class="btn btn-primary">Sign In</button>
-            <button type="button" class="btn btn-danger">Sign Out</button>
+            <button type="button" class="btn btn-primary" @click.prevent="signIn">Sign In</button>
+            <button type="button" class="btn btn-danger" @click.prevent="signOut">Sign Out</button>
         </form>
     </div>
 </template>
 
 <script>
+import Firebase from 'firebase';
+
 export default {
-    
+    methods: {
+        signIn() {
+            
+        },
+        signOut() {
+
+        }
+    }
 }
 </script>
