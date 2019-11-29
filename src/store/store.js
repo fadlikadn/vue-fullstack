@@ -42,6 +42,7 @@ export const store = new Vuex.Store({
 
         },
         orders: [],
+        currentUser: null,
     },
     getters: {
         getMenuItems: state => state.menuItems,
@@ -49,5 +50,17 @@ export const store = new Vuex.Store({
     },
     mutations: {
         addOrder: (state, order) => state.orders.push(order),
+        userStatus (state, user) {
+            if (user) {
+                state.currentUser = user;
+            } else {
+                state.currentUser = null;
+            }
+        }
+    },
+    actions: {
+        setUser({ commit }, user) {
+            commit('userStatus', user);
+        }
     }
 });
