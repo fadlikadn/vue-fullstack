@@ -5,6 +5,7 @@
     </div>
     <div class="container">
       <router-view></router-view>
+      <router-view></router-view>
     </div>
     <div class="container">
       <pp-footer></pp-footer>
