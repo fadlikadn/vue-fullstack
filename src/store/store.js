@@ -47,12 +47,13 @@ export const store = new Vuex.Store({
     getters: {
         getMenuItems: state => state.menuItems,
         numberOfOrders: state => state.orders.length,
+        currentUser: state => state.currentUser,
     },
     mutations: {
         addOrder: (state, order) => state.orders.push(order),
         userStatus (state, user) {
             if (user) {
-                state.currentUser = user;
+                state.currentUser = user.email;
             } else {
                 state.currentUser = null;
             }
