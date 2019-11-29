@@ -36,6 +36,18 @@ const router = new VueRouter({
   mode: 'history',
 });
 
+router.beforeEach((to, from, next) => {
+  // ${to and from are Route Object,next() must be called to resolve the hook}
+  console.log(to, from);
+  next();
+
+  // if (to.path === "/menu") {
+  //   next();
+  // } else {
+  //   next('false');
+  // }
+});
+
 new Vue({
   el: '#app',
   router,
