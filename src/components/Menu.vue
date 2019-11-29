@@ -1,5 +1,6 @@
 <template>
     <div class="row">
+        {{ $route.params.items }}
         <div class="col-sm-12 col-md-6">
             <table class="table table-hover">
                 <thead class="thead-default">

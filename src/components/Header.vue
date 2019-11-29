@@ -8,14 +8,25 @@
 
             <div class="collapse navbar-collapse" id="navbarHeader">
                 <ul class="navbar-nav mr-auto">
-                    <router-link to="/" tag="li"><a class="nav-link">Home</a></router-link> 
-                    <router-link to="/menu" tag="li"><a class="nav-link">Menu</a></router-link>
+                    <router-link :to="homeLink" tag="li"><a class="nav-link">Home</a></router-link> 
+                    <router-link :to="menuLink" tag="li"><a class="nav-link">Menu</a></router-link>
                 </ul>
             </div>
             
         </nav>
     </header>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            homeLink: '/',
+            menuLink: '/menu'
+        }
+    },
+}
+</script>
 
 <style>
     header {
