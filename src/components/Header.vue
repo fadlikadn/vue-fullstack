@@ -8,8 +8,8 @@
 
             <div class="collapse navbar-collapse" id="navbarHeader">
                 <ul class="navbar-nav mr-auto">
-                    <router-link :to="homeLink" tag="li"><a class="nav-link">Home</a></router-link> 
-                    <router-link :to="menuLink" tag="li"><a class="nav-link">Menu</a></router-link>
+                    <router-link :to="{ name: 'homeLink' }" tag="li"><a class="nav-link">Home</a></router-link> 
+                    <router-link :to="{ name: 'menuLink' }" tag="li"><a class="nav-link">Menu</a></router-link>
                 </ul>
             </div>
             
@@ -19,12 +19,7 @@
 
 <script>
 export default {
-    data() {
-        return {
-            homeLink: '/',
-            menuLink: '/menu'
-        }
-    },
+    
 }
 </script>
 
