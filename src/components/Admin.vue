@@ -71,6 +71,18 @@ export default {
     components: {
         ppNewPizza: NewPizza,
         ppLogin: Login,
+    },
+    data() {
+        return {
+            name: 'Fadli'
+        }
+    },
+    beforeRouteEnter: (to, from, next) => {
+        console.log(this.name);
+        next(vm => {
+            console.log(vm.name);
+            alert(`Hi ${vm.name}`);
+        });
     }
 }
 </script>
