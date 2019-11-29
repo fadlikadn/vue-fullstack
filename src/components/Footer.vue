@@ -7,15 +7,10 @@
             
             <div class="collapse navbar-collapse" id="navbarFooter">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Admin</a>
-                    </li>
+                    <router-link to="/" tag="li"><a class="nav-link">Home</a></router-link> 
+                    <router-link to="/about" tag="li"><a class="nav-link">About</a></router-link>
+                    <router-link to="/admin" tag="li"><a class="nav-link">Admin</a></router-link>
+
                 </ul>
             </div>
         </nav>
