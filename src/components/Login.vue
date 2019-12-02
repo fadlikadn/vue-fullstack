@@ -2,7 +2,8 @@
     <div class="row">
         <div>
             <div>
-            <p>Logged in as: <br> {{ currentUser }}</p>
+                <p v-if="!currentUser">Please login to continue</p>
+                <p v-else>Logged in as: <br> {{ currentUser }}</p>
             </div>
             <form>
                 <div class="form-group">
@@ -13,8 +14,8 @@
                     <label>Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Enter password">
                 </div>
-                <button type="button" class="btn btn-primary" @click="signIn()">Sign In</button>
-                <button type="button" class="btn btn-danger" @click="signOut()">Sign Out</button>
+                <button type="button" class="btn btn-primary" @click="signIn()" v-if="!currentUser">Sign In</button>
+                <button type="button" class="btn btn-danger" @click="signOut()" v-if="currentUser">Sign Out</button>
             </form>
         </div>
     </div>
@@ -67,3 +68,9 @@ export default {
     }
 }
 </script>
+
+<style>
+    form {
+        margin: 20px 0;
+    }
+</style>
