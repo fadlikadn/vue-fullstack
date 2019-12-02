@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "accounting-js": "^1.1.1",
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap": "^4.4.0",
     "firebase": "^7.5.0",
